@@ -72,6 +72,47 @@
 }
 .mentoring h3 { margin-bottom: .65rem; }
 .mentoring-contact { display: inline-block; font-weight: 650; }
+
+.work-sample {
+  display: grid;
+  grid-template-columns: minmax(0, 9.75rem) minmax(0, 1fr);
+  align-items: center;
+  gap: .9rem;
+  width: min(100%, 34rem);
+  margin: 1rem 0 0;
+  padding: .65rem;
+  border: 1px solid #c8c8b9;
+  background: #f3f0e6;
+  text-decoration: none;
+}
+.work-sample img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #eae9df;
+}
+.work-sample-title {
+  display: block;
+  font: 500 1.27rem/1.18 var(--serif);
+  text-decoration: underline;
+  text-underline-offset: .17em;
+}
+.work-sample-note {
+  display: block;
+  margin-top: .27rem;
+  color: var(--muted);
+  font-size: .79rem;
+  line-height: 1.45;
+}
+.work-sample:hover { background: #eeebdf; }
+.work-sample-book img { background: #efe0e2; }
+@media (max-width: 44rem) {
+  .work-sample { grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: .7rem; }
+}
+@media (max-width: 23rem) {
+  .work-sample { grid-template-columns: minmax(0, 5.6rem) minmax(0, 1fr); }
+}
 </style>
 </head>
 <body id="top">
@@ -121,7 +162,14 @@
         <div class="career-mark"><img src="logos/urban-launchpad.png" alt="" width="26" height="26" loading="lazy"><span>Urban Launchpad</span></div>
       </div>
       <div class="chapter-copy">
-        <h3>Start with the people who ride the bus.</h3><p>At MIT, I studied how people get around cities. In Dhaka, I worked with Urban Launchpad and local collaborators to map bus routes so riders could make sense of the network.</p><a href="https://atlasofpopulartransport.mit.edu/dhaka">Explore the map</a>
+        <h3>Start with the people who ride the bus.</h3><p>At MIT, I studied how people get around cities. In Dhaka, I worked with Urban Launchpad and local collaborators to map bus routes so riders could make sense of the network.</p><a href="https://atlasofpopulartransport.mit.edu/dhaka">Read the story behind the map</a>
+        <a class="work-sample" href="https://kewkradong.com/wp-content/uploads/2020/04/Trino10.pdf">
+          <img src="artifacts/dhaka-bus-map.webp" alt="" loading="lazy" decoding="async">
+          <span>
+            <span class="work-sample-title">Dhaka’s first bus map <span aria-hidden="true">↗</span></span>
+            <span class="work-sample-note">Open the original printed map (PDF).</span>
+          </span>
+        </a>
         <div class="recognition">
           <h4>Recognition</h4>
           <ul>
@@ -142,6 +190,13 @@
         <h3>Help more people make things.</h3>
         <p class="role-progression">First product hire → Head of Operations → COO</p>
         <p>At Thunkable, I helped people build mobile apps without writing code. I built apps of my own that the community remixed 120,000 times. The best part was seeing what first-time developers made once they had the tools.</p><a href="https://www.linkedin.com/pulse/16-best-thunkable-apps-2016-albert-ching">See what our community built</a> · <a href="https://thunkable.com/">Visit Thunkable</a>
+        <a class="work-sample" href="https://community.thunkable.com/t/beginner-sample-app-feelings-a-swipe-able-audio-book/20114">
+          <img src="artifacts/thunkable-feelings.webp" alt="" loading="lazy" decoding="async">
+          <span>
+            <span class="work-sample-title">Feelings, an audiobook app <span aria-hidden="true">↗</span></span>
+            <span class="work-sample-note">A screenshot and the original Thunkable community post.</span>
+          </span>
+        </a>
       </div>
     </article>
     <article class="chapter" id="growth">
@@ -170,6 +225,13 @@
       </div>
       <div class="chapter-copy">
         <h3>Build a business one conversation at a time.</h3><p>I co-founded New Market Goods to make the story behind clothing made in Bangladesh more visible. Today at Maison Buongiorno I make the perfumes, tell their stories, and meet customers at pop-ups. I get to see what makes someone curious enough to stop, try a scent, and make it their own.</p><a href="https://www.faire.com/brand/b_e4c41203">See New Market Goods</a> · <a href="https://maisonbuongiorno.com/">Visit the parfumerie</a>
+        <a class="work-sample work-sample-book" href="https://maisonbuongiorno.com/how-to-make-great-love">
+          <img src="artifacts/how-to-make-great-love.webp" alt="" loading="lazy" decoding="async">
+          <span>
+            <span class="work-sample-title">How to Make Great Love <span aria-hidden="true">↗</span></span>
+            <span class="work-sample-note">Read the first chapter of my illustrated book.</span>
+          </span>
+        </a>
         <div class="recognition">
           <h4>Recognition</h4>
           <ul>
