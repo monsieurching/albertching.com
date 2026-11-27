@@ -9,6 +9,69 @@
 :root{color-scheme:light;--paper:#f8f6ed;--ink:#182c27;--muted:#485951;--line:#bdc7b6;--accent:#7f3424;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1.06rem/1.6 system-ui,sans-serif}a{color:inherit;text-underline-offset:.23em}a:hover{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.wrap{width:min(72rem,calc(100% - 3rem));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1.3rem 0;border-bottom:1px solid var(--line)}.name{font:700 1.35rem var(--serif);text-decoration:none}nav{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;font-size:.9rem}.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:3rem;align-items:center;padding:4.5rem 0 3rem}.eyebrow,.label{font-size:.875rem;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}h1,h2,h3{font-family:var(--serif);line-height:1.08;font-weight:500;margin:0}h1{font-size:clamp(3.5rem,8vw,7.6rem);letter-spacing:-.055em}h2{font-size:clamp(2.4rem,5vw,4.5rem);letter-spacing:-.04em}h3{font-size:clamp(1.75rem,3.2vw,2.55rem);letter-spacing:-.025em}p{max-width:64ch}.lead{font-size:clamp(1.18rem,2.3vw,1.52rem);max-width:37ch}.portrait{margin:0;align-self:stretch;display:grid;align-content:end;justify-items:center;background:#dce5d3;border-radius:48% 48% .25rem .25rem;overflow:hidden;min-height:18rem}.portrait img{width:100%;height:100%;max-height:26rem;object-fit:contain;object-position:bottom}.portrait figcaption{font-size:.88rem;padding:.5rem 1rem;background:#dce5d3;width:100%;text-align:center}.route{display:flex;flex-wrap:wrap;gap:.55rem 1.2rem;list-style:none;padding:1rem 0;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.94rem}.route a{display:inline-block;padding:.25rem 0}.route li:last-child{font-weight:700;color:var(--accent)}section{padding:3.7rem 0}article{scroll-margin-top:1.5rem}.chapter{display:grid;grid-template-columns:minmax(8rem,1fr) minmax(0,4fr);gap:.5rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}.chapter .label{padding-top:.4rem}.chapter p{margin:.55rem 0}.chapter a,.project a{font-size:.94rem}.projects{background:#e4eadb}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-top:2rem}.project{border-top:1px solid var(--line);padding-top:1.25rem}.community{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem}.next{background:var(--ink);color:var(--paper)}.next .eyebrow{color:#d1ddd0}.next a:hover{color:#ffd1b7}.contact{display:flex;flex-wrap:wrap;gap:.8rem 1.5rem}.contact a{display:inline-block;padding:.4rem 0}footer{font-size:.875rem;padding:1.1rem 0}.skip{position:absolute;top:0;left:-100rem}.skip:focus{left:1rem;background:white;padding:.5rem;z-index:1}
 @media(max-width:44rem){.wrap{width:calc(100% - 2rem)}.hero,.community,.cards{grid-template-columns:1fr;gap:1.5rem}.hero{padding-top:2.5rem}.portrait{max-width:24rem}.chapter{grid-template-columns:1fr;gap:.25rem}section{padding:2.7rem 0}}
+
+/* Organization marks follow the career index without competing with the story. */
+.chapter {
+  grid-template-columns: minmax(10rem, 1fr) minmax(0, 3.55fr);
+  padding: 1.7rem 0;
+}
+.career-brand { min-width: 0; }
+.chapter .role-progression {
+  margin: .5rem 0;
+  max-width: none;
+  color: var(--muted);
+  font-size: .87rem;
+}
+.chapter .label {
+  margin: 0 0 .55rem;
+  padding: 0;
+  font-size: .68rem;
+  letter-spacing: .11em;
+}
+.career-mark {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  align-items: center;
+  gap: .62rem;
+  margin: 0 0 .48rem;
+  font-size: .84rem;
+  font-weight: 550;
+  line-height: 1.25;
+}
+.career-mark img { width: 26px; height: 26px; object-fit: contain; }
+.recognition {
+  margin: .9rem 0 0;
+  padding: .65rem .9rem;
+  width: fit-content;
+  max-width: 100%;
+  border-left: 2px solid #b2bca8;
+  background: #eeeee3;
+  font-size: .85rem;
+}
+.recognition h4 {
+  margin: 0 .8rem .18rem 0;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 650;
+}
+.recognition ul { margin: 0; padding-inline-start: 1rem; }
+.recognition li + li { margin-top: .13rem; }
+.recognition a { font-size: inherit; }
+@media (max-width: 44rem) {
+  .chapter { grid-template-columns: 1fr; gap: .65rem; }
+  .career-brand { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .72rem; }
+  .chapter .label, .career-mark { margin: 0; }
+  .career-mark { grid-template-columns: 22px minmax(0, 1fr); gap: .35rem; }
+  .career-mark img { width: 22px; height: 22px; }
+}
+
+.next .mentoring {
+  margin-top: clamp(1.8rem, 5vw, 3rem);
+  padding: clamp(1.6rem, 4vw, 2.5rem) 0 0;
+  border-top: 1px solid #829284;
+}
+.mentoring h3 { margin-bottom: .65rem; }
+.mentoring-contact { display: inline-block; font-weight: 650; }
 </style>
 </head>
 <body id="top">
@@ -26,12 +89,95 @@
   <section id="journey" aria-labelledby="journey-title">
     <h2 id="journey-title">The journey</h2>
     <p>Six chapters, each with a different way of getting an idea into the world.</p>
-    <article class="chapter" id="consulting"><div class="label">Consultant</div><div><h3>Learn to frame the question.</h3><p>I started in consulting at Parthenon, where I learned to break down an unfamiliar business problem and explain what mattered.</p><a href="https://www.linkedin.com/in/mrching/">Career history on LinkedIn</a></div></article>
-    <article class="chapter" id="finance"><div class="label">Finance</div><div><h3>Put numbers behind a new idea.</h3><p>I helped establish Google’s finance function in Asia Pacific and worked on early Google Maps decisions, including how to acquire road data and imagery.</p><a href="https://www.google.com/maps">Explore Google Maps</a></div></article>
-    <article class="chapter" id="planning"><div class="label">City planner</div><div><h3>Start with the people who ride the bus.</h3><p>At MIT, I studied how people get around cities. In Dhaka, I worked with Urban Launchpad and local collaborators to map bus routes so riders could make sense of the network.</p><a href="https://www.youtube.com/watch?v=97rNLDh9czg">Watch our TEDxDhaka talk</a> · <a href="https://atlasofpopulartransport.mit.edu/dhaka">Explore the map</a></div></article>
-    <article class="chapter" id="product"><div class="label">Product</div><div><h3>Help more people make things.</h3><p>At Thunkable, I helped people build mobile apps without writing code. The best part was seeing what first-time developers made once they had the tools.</p><a href="https://www.linkedin.com/pulse/16-best-thunkable-apps-2016-albert-ching">See what our community built</a> · <a href="https://thunkable.com/">Visit Thunkable</a></div></article>
-    <article class="chapter" id="growth"><div class="label">Growth</div><div><h3>Make it easier to take the next step.</h3><p>At Google Shopping, that meant helping advertisers move to a new platform. At Station A, it meant building a marketplace that made it easier for businesses to evaluate and buy clean energy.</p><a href="https://stationa.com/">Explore Station A</a></div></article>
-    <article class="chapter" id="founder"><div class="label">Founder</div><div><h3>Build a business one conversation at a time.</h3><p>I co-founded New Market Goods to make the story behind clothing made in Bangladesh more visible. Today at Maison Buongiorno I make the perfumes, tell their stories, and meet customers at pop-ups. I get to see what makes someone curious enough to stop, try a scent, and make it their own.</p><a href="https://www.faire.com/brand/b_e4c41203">See New Market Goods</a> · <a href="https://maisonbuongiorno.com/">Visit the parfumerie</a></div></article>
+    <article class="chapter" id="consulting">
+      <div class="career-brand">
+        <div class="label">Consultant</div>
+        <div class="career-mark"><img src="logos/ey-parthenon.png" alt="" width="26" height="26" loading="lazy"><span>Parthenon</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Learn to frame the question.</h3><p>I started in consulting at Parthenon, where I learned to break down an unfamiliar business problem and explain what mattered.</p><a href="https://www.linkedin.com/in/mrching/">Career history on LinkedIn</a>
+      </div>
+    </article>
+    <article class="chapter" id="finance">
+      <div class="career-brand">
+        <div class="label">Finance</div>
+        <div class="career-mark"><img src="logos/google.png" alt="" width="26" height="26" loading="lazy"><span>Google Maps</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Put numbers behind a new idea.</h3>
+        <p class="role-progression">Senior Financial Analyst → Finance Manager</p>
+        <p>I helped establish Google’s finance function in Asia Pacific and worked on early Google Maps decisions, including how to acquire road data and imagery.</p><a href="https://www.google.com/maps">Explore Google Maps</a>
+        <div class="recognition">
+          <h4>Recognition</h4>
+          <ul>
+          <li>Google Maps EMG Award</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="chapter" id="planning">
+      <div class="career-brand">
+        <div class="label">City planner</div>
+        <div class="career-mark"><img src="logos/urban-launchpad.png" alt="" width="26" height="26" loading="lazy"><span>Urban Launchpad</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Start with the people who ride the bus.</h3><p>At MIT, I studied how people get around cities. In Dhaka, I worked with Urban Launchpad and local collaborators to map bus routes so riders could make sense of the network.</p><a href="https://atlasofpopulartransport.mit.edu/dhaka">Explore the map</a>
+        <div class="recognition">
+          <h4>Recognition</h4>
+          <ul>
+          <li><a href="https://lcau.mit.edu/research/atlas-popular-transport">2025 Venice Architecture Biennale</a></li>
+          <li>Mentioned in <i>WIRED</i></li>
+          <li><a href="https://www.youtube.com/watch?v=97rNLDh9czg">TEDxDhaka</a></li>
+          <li><a href="https://publications.jrc.ec.europa.eu/repository/bitstream/JRC103294/lb-na-28247-en-n.pdf">Cited by the European Commission’s Joint Research Centre</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="chapter" id="product">
+      <div class="career-brand">
+        <div class="label">Product</div>
+        <div class="career-mark"><img src="logos/thunkable.png" alt="" width="26" height="26" loading="lazy"><span>Thunkable</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Help more people make things.</h3>
+        <p class="role-progression">First product hire → Head of Operations → COO</p>
+        <p>At Thunkable, I helped people build mobile apps without writing code. I built apps of my own that the community remixed 120,000 times. The best part was seeing what first-time developers made once they had the tools.</p><a href="https://www.linkedin.com/pulse/16-best-thunkable-apps-2016-albert-ching">See what our community built</a> · <a href="https://thunkable.com/">Visit Thunkable</a>
+      </div>
+    </article>
+    <article class="chapter" id="growth">
+      <div class="career-brand">
+        <div class="label">Growth</div>
+        <div class="career-mark"><img src="logos/google.png" alt="" width="26" height="26" loading="lazy"><span>Google Shopping</span></div>
+        <div class="career-mark"><img src="logos/station-a.png" alt="" width="26" height="26" loading="lazy"><span>Station A</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Make it easier to take the next step.</h3>
+        <p class="role-progression"><strong>Station A</strong> · First product hire → Product Lead → Director of Strategy and Operations</p>
+        <p>At Google Shopping, that meant helping advertisers move to a new platform. At Station A, it meant building a marketplace that made it easier for businesses to evaluate and buy clean energy.</p><a href="https://stationa.com/">Explore Station A</a>
+        <div class="recognition">
+          <h4>Recognition</h4>
+          <ul>
+          <li>Google Shopping Spot Bonus</li>
+          <li>Team award: trip to the Dominican Republic</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="chapter" id="founder">
+      <div class="career-brand">
+        <div class="label">Founder</div>
+        <div class="career-mark"><img src="logos/maison-buongiorno.png" alt="" width="26" height="26" loading="lazy"><span>Maison Buongiorno</span></div>
+      </div>
+      <div class="chapter-copy">
+        <h3>Build a business one conversation at a time.</h3><p>I co-founded New Market Goods to make the story behind clothing made in Bangladesh more visible. Today at Maison Buongiorno I make the perfumes, tell their stories, and meet customers at pop-ups. I get to see what makes someone curious enough to stop, try a scent, and make it their own.</p><a href="https://www.faire.com/brand/b_e4c41203">See New Market Goods</a> · <a href="https://maisonbuongiorno.com/">Visit the parfumerie</a>
+        <div class="recognition">
+          <h4>Recognition</h4>
+          <ul>
+          <li>Maison Buongiorno · Nouvelle Vague, <a href="https://www.perfume-week.com/paris-perfume-week/">Paris Perfume Week 2027</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
   </section>
 </div>
 <section class="projects" id="projects" aria-labelledby="projects-title"><div class="wrap">
@@ -49,6 +195,12 @@
   <p class="eyebrow">The next chapter</p><h2 id="next-title">What could we build together?</h2>
   <p>I’m curious about new products that need to find their first customers, collaborations with people who care about how things are made, and ways to bring more hands-on learning into schools. If you see a connection to something you’re building, I’d love to hear what you see.</p>
   <div class="contact"><a href="mailto:mrching@gmail.com">Email Albert</a><a href="https://www.linkedin.com/in/mrching/">Connect on LinkedIn</a></div>
+  <section class="mentoring" id="mentoring" aria-labelledby="mentoring-title">
+    <h3 id="mentoring-title">Mentoring &amp; big questions</h3>
+    <p>If you’re starting something of your own, finding your way along a non-traditional path, or just sitting with one of life’s big questions, I’m happy to listen and help you think it through.</p>
+    <p>I write about some of those questions in <a href="https://maisonbuongiorno.com/books"><i>Grandi Domande</i></a>, my series of little books on love, work, faith, parenthood, and time. You can start with <a href="https://maisonbuongiorno.com/how-to-make-great-love"><i>How to Make Great Love</i></a> or <a href="https://maisonbuongiorno.com/how-to-see-god"><i>How to See God</i></a>, or follow <a href="https://monsieurbuongiorno.substack.com/">The Journal of Monsieur Buongiorno on Substack</a>.</p>
+    <a class="mentoring-contact" href="mailto:mrching@gmail.com?subject=Mentoring%20and%20big%20questions">Tell me what you’re working through</a>
+  </section>
 </div></section>
 </main>
 <footer class="wrap">Albert Ching · San Francisco</footer>
